@@ -1,0 +1,1529 @@
+{
+	"info": {
+		"_postman_id": "bd0e0de3-d9d3-4efc-8d1d-ab0e7601f7d8",
+		"name": "Frollo API - BOQ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13764479"
+	},
+	"item": [
+		{
+			"name": "api/v2/goals",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Api-Version",
+						"value": "API2.26"
+					},
+					{
+						"key": "X-Bundle-Id",
+						"value": "us.frollo.Frollo"
+					},
+					{
+						"key": "X-Device-Version",
+						"value": "iOS13.4.1"
+					},
+					{
+						"key": "X-Software-Version",
+						"value": "V2.00-B2123"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/v2/goals?account_id&status&tracking_status",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"goals"
+					],
+					"query": [
+						{
+							"key": "account_id",
+							"value": null
+						},
+						{
+							"key": "status",
+							"value": null
+						},
+						{
+							"key": "tracking_status",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List Goals - All",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Api-Version",
+								"value": "API2.26"
+							},
+							{
+								"key": "X-Bundle-Id",
+								"value": "us.frollo.Frollo"
+							},
+							{
+								"key": "X-Device-Version",
+								"value": "iOS13.4.1"
+							},
+							{
+								"key": "X-Software-Version",
+								"value": "V2.00-B2123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://e1c1eed3-be4b-45f1-8728-2816d6f30af8.mock.pstmn.io/api/v2/goals?account_id&status&tracking_status",
+							"protocol": "https",
+							"host": [
+								"e1c1eed3-be4b-45f1-8728-2816d6f30af8",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v2",
+								"goals"
+							],
+							"query": [
+								{
+									"key": "account_id",
+									"value": null
+								},
+								{
+									"key": "status",
+									"value": null
+								},
+								{
+									"key": "tracking_status",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 17 May 2024 01:32:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "692"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=1d064fe04120eeb7"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=99e90ebaf3f221bc"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1715909637"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2b4-ffcdq5jXquyIdBBpUSAD9NR5H54\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"MyGoal\",\n        \"description\": \"Saving for France\",\n        \"image_url\": \"https://image.frollo.us\",\n        \"account_id\": 1,\n        \"tracking_status\": \"above\",\n        \"tracking_type\": \"debit\",\n        \"status\": \"unstarted\",\n        \"frequency\": \"daily\",\n        \"target\": \"open_ended\",\n        \"currency\": \"AUD\",\n        \"current_amount\": {{$randomInt}},\n        \"period_amount\": {{$randomInt}},\n        \"start_amount\": {{$randomInt}},\n        \"target_amount\": {{$randomInt}},\n        \"start_date\": \"2019-01-01\",\n        \"end_date\": \"2019-01-01\",\n        \"estimated_end_date\": \"2019-01-01\",\n        \"estimated_target_amount\": \"10000.00\",\n        \"periods_count\": 10\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Home Goal\",\n        \"description\": \"Saving for home\",\n        \"image_url\": \"https://image.frollo.us\",\n        \"account_id\": 2,\n        \"tracking_status\": \"above\",\n        \"tracking_type\": \"debit\",\n        \"status\": \"unstarted\",\n        \"frequency\": \"daily\",\n        \"target\": \"open_ended\",\n        \"currency\": \"AUD\",\n        \"current_amount\": {{$randomInt}},\n        \"period_amount\": {{$randomInt}},\n        \"start_amount\": {{$randomInt}},\n        \"target_amount\": {{$randomInt}},\n        \"start_date\": \"2019-01-01\",\n        \"end_date\": \"2019-01-01\",\n        \"estimated_end_date\": \"2019-01-01\",\n        \"estimated_target_amount\": \"10000.00\",\n        \"periods_count\": 10\n    }\n]"
+				},
+				{
+					"name": "api/v2/goals (Account-id-1)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Api-Version",
+								"value": "API2.26"
+							},
+							{
+								"key": "X-Bundle-Id",
+								"value": "us.frollo.Frollo"
+							},
+							{
+								"key": "X-Device-Version",
+								"value": "iOS13.4.1"
+							},
+							{
+								"key": "X-Software-Version",
+								"value": "V2.00-B2123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/v2/goals?account_id=1&status&tracking_status",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"goals"
+							],
+							"query": [
+								{
+									"key": "account_id",
+									"value": "1"
+								},
+								{
+									"key": "status",
+									"value": null
+								},
+								{
+									"key": "tracking_status",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 17 May 2024 03:10:50 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "692"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=1d064fe04120eeb7"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=99e90ebaf3f221bc"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1715909637"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2b4-ffcdq5jXquyIdBBpUSAD9NR5H54\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"MyGoal\",\n        \"description\": \"Saving for France\",\n        \"image_url\": \"https://image.frollo.us\",\n        \"account_id\": 1,\n        \"tracking_status\": \"above\",\n        \"tracking_type\": \"debit\",\n        \"status\": \"unstarted\",\n        \"frequency\": \"daily\",\n        \"target\": \"open_ended\",\n        \"currency\": \"AUD\",\n        \"current_amount\": {{$randomInt}},\n        \"period_amount\": {{$randomInt}},\n        \"start_amount\": {{$randomInt}},\n        \"target_amount\": {{$randomInt}},\n        \"start_date\": \"2019-01-01\",\n        \"end_date\": \"2019-01-01\",\n        \"estimated_end_date\": \"2019-01-01\",\n        \"estimated_target_amount\": \"10000.00\",\n        \"periods_count\": 10\n    }\n]"
+				},
+				{
+					"name": "api/v2/goals(Account-id-2)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Api-Version",
+								"value": "API2.26"
+							},
+							{
+								"key": "X-Bundle-Id",
+								"value": "us.frollo.Frollo"
+							},
+							{
+								"key": "X-Device-Version",
+								"value": "iOS13.4.1"
+							},
+							{
+								"key": "X-Software-Version",
+								"value": "V2.00-B2123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/v2/goals?account_id=2&status&tracking_status",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"goals"
+							],
+							"query": [
+								{
+									"key": "account_id",
+									"value": "2"
+								},
+								{
+									"key": "status",
+									"value": null
+								},
+								{
+									"key": "tracking_status",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 20 May 2024 03:03:41 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "692"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=1d064fe04120eeb7"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=99e90ebaf3f221bc"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1715909637"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2b4-ffcdq5jXquyIdBBpUSAD9NR5H54\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"name\": \"Home Goal\",\n        \"description\": \"Saving for home\",\n        \"image_url\": \"https://image.frollo.us\",\n        \"account_id\": 2,\n        \"tracking_status\": \"above\",\n        \"tracking_type\": \"debit\",\n        \"status\": \"unstarted\",\n        \"frequency\": \"daily\",\n        \"target\": \"open_ended\",\n        \"currency\": \"AUD\",\n        \"current_amount\": {{$randomInt}},\n        \"period_amount\": {{$randomInt}},\n        \"start_amount\": {{$randomInt}},\n        \"target_amount\": {{$randomInt}},\n        \"start_date\": \"2019-01-01\",\n        \"end_date\": \"2019-01-01\",\n        \"estimated_end_date\": \"2019-01-01\",\n        \"estimated_target_amount\": \"10000.00\",\n        \"periods_count\": 10\n    }\n]"
+				},
+				{
+					"name": "random amounts",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Api-Version",
+								"value": "API2.26"
+							},
+							{
+								"key": "X-Bundle-Id",
+								"value": "us.frollo.Frollo"
+							},
+							{
+								"key": "X-Device-Version",
+								"value": "iOS13.4.1"
+							},
+							{
+								"key": "X-Software-Version",
+								"value": "V2.00-B2123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/v2/goals?account_id&status&tracking_status",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"goals"
+							],
+							"query": [
+								{
+									"key": "account_id",
+									"value": null
+								},
+								{
+									"key": "status",
+									"value": null
+								},
+								{
+									"key": "tracking_status",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 21 May 2024 02:17:44 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=1d064fe04120eeb7"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=99e90ebaf3f221bc"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1715909637"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2b4-ffcdq5jXquyIdBBpUSAD9NR5H54\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"MyGoal\",\n        \"description\": \"Saving for France\",\n        \"image_url\": \"https://image.frollo.us\",\n        \"account_id\": 1,\n        \"tracking_status\": \"above\",\n        \"tracking_type\": \"debit\",\n        \"status\": \"unstarted\",\n        \"frequency\": \"daily\",\n        \"target\": \"open_ended\",\n        \"currency\": \"AUD\",\n        \"current_amount\": {{$randomInt}},\n        \"period_amount\": {{$randomInt}},\n        \"start_amount\": {{$randomInt}},\n        \"target_amount\": {{$randomInt}},\n        \"start_date\": \"2019-01-01\",\n        \"end_date\": \"2019-01-01\",\n        \"estimated_end_date\": \"2019-01-01\",\n        \"estimated_target_amount\": \"10000.00\",\n        \"periods_count\": 10\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Home Goal\",\n        \"description\": \"Saving for home\",\n        \"image_url\": \"https://image.frollo.us\",\n        \"account_id\": 2,\n        \"tracking_status\": \"above\",\n        \"tracking_type\": \"debit\",\n        \"status\": \"unstarted\",\n        \"frequency\": \"daily\",\n        \"target\": \"open_ended\",\n        \"currency\": \"AUD\",\n        \"current_amount\": {{$randomInt}},\n        \"period_amount\": {{$randomInt}},\n        \"start_amount\": {{$randomInt}},\n        \"target_amount\": {{$randomInt}},\n        \"start_date\": \"2019-01-01\",\n        \"end_date\": \"2019-01-01\",\n        \"estimated_end_date\": \"2019-01-01\",\n        \"estimated_target_amount\": \"10000.00\",\n        \"periods_count\": 10\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "api/v2/goals",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Api-Version",
+						"value": "API2.26"
+					},
+					{
+						"key": "X-Bundle-Id",
+						"value": "us.frollo.Frollo"
+					},
+					{
+						"key": "X-Device-Version",
+						"value": "iOS13.4.1"
+					},
+					{
+						"key": "X-Software-Version",
+						"value": "V2.00-B2123"
+					},
+					{
+						"key": "X-User-Otp",
+						"value": "24122"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"My Goal\",\n  \"description\": \"Saving for France\",\n  \"image_url\": \"https://image.frollo.us\",\n  \"account_id\": 1,\n  \"tracking_type\": \"debit_credit\",\n  \"frequency\": \"weekly\",\n  \"target\": \"open_ended\",\n  \"period_amount\": \"100.00\",\n  \"start_amount\": \"100.00\",\n  \"start_date\": \"2019-01-01\",\n  \"end_date\": \"2021-01-01\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/v2/goals",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"goals"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create goal",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Api-Version",
+								"value": "API2.26"
+							},
+							{
+								"key": "X-Bundle-Id",
+								"value": "us.frollo.Frollo"
+							},
+							{
+								"key": "X-Device-Version",
+								"value": "iOS13.4.1"
+							},
+							{
+								"key": "X-Software-Version",
+								"value": "V2.00-B2123"
+							},
+							{
+								"key": "X-User-Otp",
+								"value": "24122"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"My Goal\",\n  \"description\": \"Saving for France\",\n  \"image_url\": \"https://image.frollo.us\",\n  \"account_id\": 1,\n  \"tracking_type\": \"debit_credit\",\n  \"frequency\": \"weekly\",\n  \"target\": \"open_ended\",\n  \"period_amount\": \"100.00\",\n  \"start_amount\": \"100.00\",\n  \"start_date\": \"2019-01-01\",\n  \"end_date\": \"2021-01-01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v2/goals",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"goals"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 17 May 2024 01:42:42 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "904"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=2a3fa3bd56499daf"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=f06ced6493f9d01f"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "118"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1715910209"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"388-kvaMgtPse2Hyv8+9j7BDK6ClMBI\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"My Goal\",\n    \"description\": \"Saving for France\",\n    \"image_url\": \"https://image.frollo.us\",\n    \"account_id\": 1,\n    \"tracking_status\": \"above\",\n    \"tracking_type\": \"debit\",\n    \"status\": \"unstarted\",\n    \"frequency\": \"daily\",\n    \"target\": \"open_ended\",\n    \"currency\": \"AUD\",\n    \"current_amount\": {{$randomInt}},\n    \"period_amount\": {{$randomInt}},\n    \"start_amount\": {{$randomInt}},\n    \"target_amount\": {{$randomInt}},\n    \"start_date\": \"2019-01-01\",\n    \"end_date\": \"2021-01-01\",\n    \"estimated_end_date\": \"2021-01-01\",\n    \"estimated_target_amount\": \"100.00\",\n    \"periods_count\": 10,\n    \"current_period\": {\n        \"id\": 1,\n        \"goal_id\": 1,\n        \"start_date\": \"2019-01-01\",\n        \"end_date\": \"2019-02-01\",\n        \"target_amount\": {{$randomInt}},\n        \"current_amount\": {{$randomInt}},\n        \"required_amount\": {{$randomInt}},\n        \"tracking_status\": \"equal\",\n        \"index\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "api/v2/goals/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Api-Version",
+						"value": "API2.26"
+					},
+					{
+						"key": "X-Bundle-Id",
+						"value": "us.frollo.Frollo"
+					},
+					{
+						"key": "X-Device-Version",
+						"value": "iOS13.4.1"
+					},
+					{
+						"key": "X-Software-Version",
+						"value": "V2.00-B2123"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/v2/goals/1?goal_id=1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"goals",
+						"1"
+					],
+					"query": [
+						{
+							"key": "goal_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Api-Version",
+								"value": "API2.26"
+							},
+							{
+								"key": "X-Bundle-Id",
+								"value": "us.frollo.Frollo"
+							},
+							{
+								"key": "X-Device-Version",
+								"value": "iOS13.4.1"
+							},
+							{
+								"key": "X-Software-Version",
+								"value": "V2.00-B2123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://e1c1eed3-be4b-45f1-8728-2816d6f30af8.mock.pstmn.io/api/v2/goals/1?goal_id=1",
+							"protocol": "https",
+							"host": [
+								"e1c1eed3-be4b-45f1-8728-2816d6f30af8",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v2",
+								"goals",
+								"1"
+							],
+							"query": [
+								{
+									"key": "goal_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 17 May 2024 03:26:03 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "973"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=2c40edeae690f6c1"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=795bb5ca5e9155db"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1715916423"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3cd-CxVXcnBqMaMnnaBBmfOxicoWTAM\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"MyGoal\",\n    \"description\": \"Saving for France\",\n    \"image_url\": \"https://image.frollo.us\",\n    \"account_id\": 1,\n    \"tracking_status\": \"above\",\n    \"tracking_type\": \"debit\",\n    \"status\": \"unstarted\",\n    \"frequency\": \"daily\",\n    \"target\": \"open_ended\",\n    \"currency\": \"AUD\",\n    \"current_amount\": {{$randomInt}},\n    \"period_amount\": {{$randomInt}},\n    \"start_amount\": {{$randomInt}},\n    \"target_amount\": {{$randomInt}},\n    \"start_date\": \"2019-01-01T00:00:00.000Z\",\n    \"end_date\": \"2019-01-01T00:00:00.000Z\",\n    \"estimated_end_date\": \"2019-01-01T00:00:00.000Z\",\n    \"estimated_target_amount\": \"10000.00\",\n    \"periods_count\": 10,\n    \"current_period\": {\n        \"id\": 1,\n        \"goal_id\": 1,\n        \"start_date\": \"2019-01-01T00:00:00.000Z\",\n        \"end_date\": \"2019-01-01T00:00:00.000Z\",\n        \"target_amount\": {{$randomInt}},\n        \"current_amount\": {{$randomInt}},\n        \"required_amount\": {{$randomInt}},\n        \"tracking_status\": \"equal\",\n        \"index\": 0\n    }\n}"
+				},
+				{
+					"name": "Failure",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Api-Version",
+								"value": "API2.26"
+							},
+							{
+								"key": "X-Bundle-Id",
+								"value": "us.frollo.Frollo"
+							},
+							{
+								"key": "X-Device-Version",
+								"value": "iOS13.4.1"
+							},
+							{
+								"key": "X-Software-Version",
+								"value": "V2.00-B2123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v2/goals/1?goal_id=a",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"goals",
+								"1"
+							],
+							"query": [
+								{
+									"key": "goal_id",
+									"value": "a"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 17 May 2024 03:26:03 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "973"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=2c40edeae690f6c1"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=795bb5ca5e9155db"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1715916423"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3cd-CxVXcnBqMaMnnaBBmfOxicoWTAM\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"error\": {\n    \"error_code\": \"F0001\",\n    \"error_message\": \"Invalid value for device_id\"\n  },\n  \"error_message\": \"Invalid value for goal_id\"\n}"
+				}
+			]
+		},
+		{
+			"name": "api/v2/goals/1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"MyGoal\",\n  \"description\": \"Saving for France\",\n  \"image_url\": \"https://image.frollo.us\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v2/goals/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"goals",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Api-Version",
+								"value": "API2.26"
+							},
+							{
+								"key": "X-Bundle-Id",
+								"value": "us.frollo.Frollo"
+							},
+							{
+								"key": "X-Device-Version",
+								"value": "iOS13.4.1"
+							},
+							{
+								"key": "X-Software-Version",
+								"value": "V2.00-B2123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"MyGoal\",\n  \"description\": \"Saving for France\",\n  \"image_url\": \"https://image.frollo.us\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://e1c1eed3-be4b-45f1-8728-2816d6f30af8.mock.pstmn.io/api/v2/goals/1?goal_id=a",
+							"protocol": "https",
+							"host": [
+								"e1c1eed3-be4b-45f1-8728-2816d6f30af8",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v2",
+								"goals",
+								"1"
+							],
+							"query": [
+								{
+									"key": "goal_id",
+									"value": "a"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 17 May 2024 03:30:53 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "973"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=13267446e75eec2a"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=be2c7e2ce6404a28"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1715916713"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3cd-CxVXcnBqMaMnnaBBmfOxicoWTAM\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"MyGoal\",\n    \"description\": \"Saving for France\",\n    \"image_url\": \"https://image.frollo.us\",\n    \"account_id\": 1,\n    \"tracking_status\": \"above\",\n    \"tracking_type\": \"debit\",\n    \"status\": \"unstarted\",\n    \"frequency\": \"daily\",\n    \"target\": \"open_ended\",\n    \"currency\": \"AUD\",\n    \"current_amount\": {{$randomInt}},\n    \"period_amount\": {{$randomInt}},\n    \"start_amount\": {{$randomInt}},\n    \"target_amount\": {{$randomInt}},\n    \"start_date\": \"2019-01-01T00:00:00.000Z\",\n    \"end_date\": \"2019-01-01T00:00:00.000Z\",\n    \"estimated_end_date\": \"2019-01-01T00:00:00.000Z\",\n    \"estimated_target_amount\": \"10000.00\",\n    \"periods_count\": 10,\n    \"current_period\": {\n        \"id\": 1,\n        \"goal_id\": 1,\n        \"start_date\": \"2019-01-01T00:00:00.000Z\",\n        \"end_date\": \"2019-01-01T00:00:00.000Z\",\n        \"target_amount\": {{$randomInt}},\n        \"current_amount\": {{$randomInt}},\n        \"required_amount\": {{$randomInt}},\n        \"tracking_status\": \"equal\",\n        \"index\": 0\n    }\n}"
+				},
+				{
+					"name": "Failure",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Api-Version",
+								"value": "API2.26"
+							},
+							{
+								"key": "X-Bundle-Id",
+								"value": "us.frollo.Frollo"
+							},
+							{
+								"key": "X-Device-Version",
+								"value": "iOS13.4.1"
+							},
+							{
+								"key": "X-Software-Version",
+								"value": "V2.00-B2123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"MyGoal\",\n  \"description\": \"Saving for France\",\n  \"image_url\": \"https://image.frollo.us\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v2/goals/1?goal_id=a",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"goals",
+								"1"
+							],
+							"query": [
+								{
+									"key": "goal_id",
+									"value": "a"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 17 May 2024 03:30:53 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "973"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=13267446e75eec2a"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=be2c7e2ce6404a28"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1715916713"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3cd-CxVXcnBqMaMnnaBBmfOxicoWTAM\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"error\": {\n    \"error_code\": \"F0001\",\n    \"error_message\": \"Invalid value for device_id\"\n  },\n  \"error_message\": \"Invalid value for goal_id\"\n}"
+				}
+			]
+		},
+		{
+			"name": "api/v2/goals/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v2/goals/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"goals",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Successful",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Api-Version",
+								"value": "API2.26"
+							},
+							{
+								"key": "X-Bundle-Id",
+								"value": "us.frollo.Frollo"
+							},
+							{
+								"key": "X-Device-Version",
+								"value": "iOS13.4.1"
+							},
+							{
+								"key": "X-Software-Version",
+								"value": "V2.00-B2123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://e1c1eed3-be4b-45f1-8728-2816d6f30af8.mock.pstmn.io/api/v2/goals/1",
+							"protocol": "https",
+							"host": [
+								"e1c1eed3-be4b-45f1-8728-2816d6f30af8",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"api",
+								"v2",
+								"goals",
+								"1"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 17 May 2024 03:33:41 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						},
+						{
+							"key": "Content-Length",
+							"value": "25"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=e4a6331f124f5af6"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=039c69320d381c8b"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1715916881"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"19-vocXu6hItX/tTbNpy53xWhSAWcM\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"deleted\"\n}"
+				},
+				{
+					"name": "Failure",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Api-Version",
+								"value": "API2.26"
+							},
+							{
+								"key": "X-Bundle-Id",
+								"value": "us.frollo.Frollo"
+							},
+							{
+								"key": "X-Device-Version",
+								"value": "iOS13.4.1"
+							},
+							{
+								"key": "X-Software-Version",
+								"value": "V2.00-B2123"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v2/goals/a",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"goals",
+								"a"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 17 May 2024 03:33:41 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "25"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=e4a6331f124f5af6"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=039c69320d381c8b"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1715916881"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"19-vocXu6hItX/tTbNpy53xWhSAWcM\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"error\": {\n    \"error_code\": \"F0001\",\n    \"error_message\": \"Invalid value for device_id\"\n  },\n  \"error_message\": \"Invalid value for goal_id\"\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://e1c1eed3-be4b-45f1-8728-2816d6f30af8.mock.pstmn.io"
+		}
+	]
+}

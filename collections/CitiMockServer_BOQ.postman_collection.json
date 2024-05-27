@@ -1,0 +1,1541 @@
+{
+	"info": {
+		"_postman_id": "26348971-0964-48c2-8ac9-34128cbcbd74",
+		"name": "CitiMockServer_BOQ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13764479"
+	},
+	"item": [
+		{
+			"name": "Client Credentials Grant",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{invalidClientIdAuthValue}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "grant_type",
+						"value": "{{validGrantType}}"
+					},
+					{
+						"key": "scope",
+						"value": "/dda/accountlist /dda/account"
+					},
+					{
+						"key": "x-mock-match-request-headers",
+						"value": "grant_type,Authorization"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/gcb/api/clientCredentials/oauth2/token/au/1234",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"gcb",
+						"api",
+						"clientCredentials",
+						"oauth2",
+						"token",
+						"au",
+						"1234"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic Y2xpZW50aWQxMjM="
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "grant_type",
+								"value": "client_credentials"
+							},
+							{
+								"key": "scope",
+								"value": "/dda/accountlist /dda/account"
+							}
+						],
+						"url": {
+							"raw": "https://32a736b0-ac4f-4a4e-b4ab-9657d2e06a89.mock.pstmn.io/gcb/api/clientCredentials/oauth2/token/au/1234",
+							"protocol": "https",
+							"host": [
+								"32a736b0-ac4f-4a4e-b4ab-9657d2e06a89",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"gcb",
+								"api",
+								"clientCredentials",
+								"oauth2",
+								"token",
+								"au",
+								"1234"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token_type\": \"bearer\",\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c\",\n    \"expires_in\": 1800,\n    \"scope\": \"/dda/accountlist /dda/account\"\n}"
+				},
+				{
+					"name": "400",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{validClientIdAuthValue}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "grant_type",
+								"value": "{{invalidGrantType}}"
+							},
+							{
+								"key": "scopee",
+								"value": "/dda/accountlist /dda/account"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/gcb/api/clientCredentials/oauth2/token/au/1234",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"gcb",
+								"api",
+								"clientCredentials",
+								"oauth2",
+								"token",
+								"au",
+								"1234"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 23 May 2024 01:34:10 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "454"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=3d9e39319db24481"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=0feb5410f187533b"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "118"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1716428072"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1c6-U7bemwS5rK1BSUWyfxLG/8Wwz4A\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"error\": \"unsupported_grant_type\",\n  \"error_description\": \"requested grant type is not supported\",\n  \"error_uri\": \"requested grant type is not supported\"\n}"
+				},
+				{
+					"name": "401",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{invalidClientIdAuthValue}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "grant_type",
+								"value": "{{validGrantType}}"
+							},
+							{
+								"key": "scope",
+								"value": "/dda/accountlist /dda/account"
+							},
+							{
+								"key": "x-mock-match-request-headers",
+								"value": "grant_type,Authorization"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/gcb/api/clientCredentials/oauth2/token/au/1234",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"gcb",
+								"api",
+								"clientCredentials",
+								"oauth2",
+								"token",
+								"au",
+								"1234"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 23 May 2024 02:11:45 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "159"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=3d9e39319db24481"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=0feb5410f187533b"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "118"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1716428072"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1c6-U7bemwS5rK1BSUWyfxLG/8Wwz4A\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"error\": \"Invalid client id\",\n  \"error_description\": \"invalid client id\",\n  \"error_uri\": \"invalid client id\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Cards",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+					},
+					{
+						"key": "client_id",
+						"value": "clientid123"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "x-mock-match-request-headers",
+						"value": "authorization,client_id,uuid"
+					},
+					{
+						"key": "x-mock-response-name",
+						"value": "500",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer",
+						"disabled": true
+					},
+					{
+						"key": "uuid",
+						"value": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/gcb/api/v1/cards?cardFunction=Debit",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"gcb",
+						"api",
+						"v1",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "cardFunction",
+							"value": "Debit"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+							},
+							{
+								"key": "client_id",
+								"value": "clientid123"
+							},
+							{
+								"key": "uuid",
+								"value": "af081b55-8658-4ef9-bcf4-ee631f5d206b"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/gcb/api/v1/cards?cardFunction=Debit",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"gcb",
+								"api",
+								"v1",
+								"cards"
+							],
+							"query": [
+								{
+									"key": "cardFunction",
+									"value": "Debit"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"cardDetails\": [\n        {\n            \"cardId\": \"3255613852316f2b4d4d796c344e38756339654972776f663745446e6d4c32486f455a4165374a476858343d\",\n            \"displayCardNumber\": \"XXXXXXXXXXXX4521\",\n            \"localCardActivationIndicator\": \"ACTIVE\",\n            \"overseasCardActivationIndicator\": \"ACTIVE\",\n            \"perpetualActivationFlag\": true,\n            \"overseasCardActivationStartDate\": \"2016-11-01\",\n            \"overseasCardActivationEndDate\": \"2016-12-05\",\n            \"currentCreditLimitAmount\": {{$randomInt}},\n            \"maximumPermanentCreditLimitAmount\": {{$randomInt}},\n            \"maximumTemporaryCreditLimitAmount\": {{$randomInt}},\n            \"subCardType\": \"DEBIT\",\n            \"cardHolderType\": \"PRIMARY\",\n            \"cardIssueReason\": \"NEWLY_ONBOARDED_CARD\",\n            \"cardFunctionsAllowed\": [\n                {\n                    \"cardFunction\": \"CREDIT_LIMIT_INCREASE\"\n                }\n            ]\n        }\n    ]\n}"
+				},
+				{
+					"name": "400",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+							},
+							{
+								"key": "client_id",
+								"value": "clientid123"
+							},
+							{
+								"key": "uuid",
+								"value": "invaliduuid"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/gcb/api/v1/cards?cardFunction=Debit",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"gcb",
+								"api",
+								"v1",
+								"cards"
+							],
+							"query": [
+								{
+									"key": "cardFunction",
+									"value": "Debit"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 23 May 2024 03:20:46 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						},
+						{
+							"key": "Content-Length",
+							"value": "926"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=64098af22726dba9"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=c20d5ff20f81de4c"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1716434506"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"39e-nm6rJYwcfXjenFm2j4wCNaCMJxM\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": \"[ invalid_request ]\",\n    \"details\": \"invalid uuid\",\n    \"location\": \"headers\",\n    \"type\": \"error\",\n    \"moreInfo\": {}\n}"
+				},
+				{
+					"name": "401",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer",
+								"description": "invalid token"
+							},
+							{
+								"key": "client_id",
+								"value": "clientid123"
+							},
+							{
+								"key": "uuid",
+								"value": "af081b55-8658-4ef9-bcf4-ee631f5d206b"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/gcb/api/v1/cards?cardFunction=Debit",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"gcb",
+								"api",
+								"v1",
+								"cards"
+							],
+							"query": [
+								{
+									"key": "cardFunction",
+									"value": "Debit"
+								}
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 23 May 2024 03:20:46 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						},
+						{
+							"key": "Content-Length",
+							"value": "926"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=64098af22726dba9"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=c20d5ff20f81de4c"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1716434506"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"39e-nm6rJYwcfXjenFm2j4wCNaCMJxM\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": \"[ unAuthorized ]\",\n    \"details\": \"string\",\n    \"location\": \"string\",\n    \"type\": \"error\",\n    \"moreInfo\": {}\n}"
+				},
+				{
+					"name": "403",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "client_id",
+								"value": "clientid456",
+								"description": "client id not configured"
+							},
+							{
+								"key": "uuid",
+								"value": "af081b55-8658-4ef9-bcf4-ee631f5d206b"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/gcb/api/v1/cards?cardFunction=Debit",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"gcb",
+								"api",
+								"v1",
+								"cards"
+							],
+							"query": [
+								{
+									"key": "cardFunction",
+									"value": "Debit"
+								}
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 23 May 2024 03:20:46 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						},
+						{
+							"key": "Content-Length",
+							"value": "926"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=64098af22726dba9"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=c20d5ff20f81de4c"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1716434506"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"39e-nm6rJYwcfXjenFm2j4wCNaCMJxM\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": \"[ accessNotConfigured ]\",\n    \"details\": \"string\",\n    \"location\": \"string\",\n    \"type\": \"error\",\n    \"moreInfo\": {}\n}"
+				},
+				{
+					"name": "404",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "client_id",
+								"value": "clientid123",
+								"description": "client id not configured"
+							},
+							{
+								"key": "uuid",
+								"value": "af081b55-8658-4ef9-bcf4-ee631f5d206b"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/gcb/api/v1/cards",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"gcb",
+								"api",
+								"v1",
+								"cards"
+							],
+							"query": [
+								{
+									"key": "cardFunction",
+									"value": "Debit",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 23 May 2024 03:20:46 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						},
+						{
+							"key": "Content-Length",
+							"value": "926"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=64098af22726dba9"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=c20d5ff20f81de4c"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1716434506"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"39e-nm6rJYwcfXjenFm2j4wCNaCMJxM\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": \"[ resourceNotFound ]\",\n    \"details\": \"Incorrect request path\",\n    \"location\": \"string\",\n    \"type\": \"error\",\n    \"moreInfo\": {}\n}"
+				},
+				{
+					"name": "500",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "client_id",
+								"value": "clientid123",
+								"description": "client id not configured"
+							},
+							{
+								"key": "uuid",
+								"value": "af081b55-8658-4ef9-bcf4-ee631f5d206b"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/gcb/api/v1/cards?cardFunction=Debit",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"gcb",
+								"api",
+								"v1",
+								"cards"
+							],
+							"query": [
+								{
+									"key": "cardFunction",
+									"value": "Debit"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 23 May 2024 03:20:46 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						},
+						{
+							"key": "Content-Length",
+							"value": "926"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=64098af22726dba9"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=c20d5ff20f81de4c"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1716434506"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"39e-nm6rJYwcfXjenFm2j4wCNaCMJxM\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": \"[ serverUnavailable ]\",\n    \"details\": \"Internal server error\",\n    \"location\": \"string\",\n    \"type\": \"error\",\n    \"moreInfo\": {}\n}"
+				},
+				{
+					"name": "Get Cards",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+							},
+							{
+								"key": "client_id",
+								"value": "clientid123"
+							},
+							{
+								"key": "uuid",
+								"value": "{{$randomUUID}}"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "x-mock-match-request-headers",
+								"value": "authorization,client_id"
+							},
+							{
+								"key": "x-mock-response-name",
+								"value": "400",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/gcb/api/v1/cards",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"gcb",
+								"api",
+								"v1",
+								"cards"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 23 May 2024 05:15:47 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "165"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=64098af22726dba9"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=c20d5ff20f81de4c"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1716434506"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"39e-nm6rJYwcfXjenFm2j4wCNaCMJxM\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"[ error | invalid_request | invalid_grant | unsupported_grant_type | unauthorized_client ]\",\n    \"error_description\": \"string\",\n    \"error_uri\": \"string\"\n}"
+				}
+			]
+		},
+		{
+			"name": "ATM PIN Reset",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+					},
+					{
+						"key": "client_id",
+						"value": "clientid123",
+						"disabled": true
+					},
+					{
+						"key": "uuid",
+						"value": "af081b55-8658-4ef9-bcf4-ee631f5d206b"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "x-mock-match-request-headers",
+						"value": "authorization,client_id,uuid"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer",
+						"disabled": true
+					},
+					{
+						"key": "x-mock-response-name",
+						"value": "500",
+						"disabled": true
+					},
+					{
+						"key": "client_id",
+						"value": "client456"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"cardId\": \"3255613852316f2b4d4d796c344e38756339654972776f663745446e6d4c32486f455a4165374a476858343d\",\n  \"newPin\": \"q745963215y6d4r951753845f455a418789x\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/gcb/api/v1/cards/atmPin/reset",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"gcb",
+						"api",
+						"v1",
+						"cards",
+						"atmPin",
+						"reset"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+							},
+							{
+								"key": "client_id",
+								"value": "clientid123"
+							},
+							{
+								"key": "uuid",
+								"value": "af081b55-8658-4ef9-bcf4-ee631f5d206b"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"cardId\": \"3255613852316f2b4d4d796c344e38756339654972776f663745446e6d4c32486f455a4165374a476858343d\",\n  \"newPin\": \"q745963215y6d4r951753845f455a418789x\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/gcb/api/v1/cards/atmPin/reset",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"gcb",
+								"api",
+								"v1",
+								"cards",
+								"atmPin",
+								"reset"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "401",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer"
+							},
+							{
+								"key": "client_id",
+								"value": "clientid123"
+							},
+							{
+								"key": "uuid",
+								"value": "af081b55-8658-4ef9-bcf4-ee631f5d206b"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"cardId\": \"3255613852316f2b4d4d796c344e38756339654972776f663745446e6d4c32486f455a4165374a476858343d\",\n  \"newPin\": \"q745963215y6d4r951753845f455a418789x\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/gcb/api/v1/cards/atmPin/reset",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"gcb",
+								"api",
+								"v1",
+								"cards",
+								"atmPin",
+								"reset"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 24 May 2024 01:59:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=45520236912c523f"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=76a38d1e98bb1ca6"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "115"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1716515997"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"0-2jmj7l5rSw0yVb/vlWAYkK/YBwk\""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": \"[ unAuthorized ]\",\n    \"details\": \"string\",\n    \"location\": \"string\",\n    \"type\": \"error\",\n    \"moreInfo\": {}\n}"
+				},
+				{
+					"name": "403",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+							},
+							{
+								"key": "client_id",
+								"value": "clientid456"
+							},
+							{
+								"key": "uuid",
+								"value": "af081b55-8658-4ef9-bcf4-ee631f5d206b"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"cardId\": \"3255613852316f2b4d4d796c344e38756339654972776f663745446e6d4c32486f455a4165374a476858343d\",\n  \"newPin\": \"q745963215y6d4r951753845f455a418789x\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/gcb/api/v1/cards/atmPin/reset",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"gcb",
+								"api",
+								"v1",
+								"cards",
+								"atmPin",
+								"reset"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 24 May 2024 01:59:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=45520236912c523f"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=76a38d1e98bb1ca6"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "115"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1716515997"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"0-2jmj7l5rSw0yVb/vlWAYkK/YBwk\""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": \"[ accessNotConfigured ]\",\n    \"details\": \"string\",\n    \"location\": \"string\",\n    \"type\": \"error\",\n    \"moreInfo\": {}\n}"
+				},
+				{
+					"name": "500",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+							},
+							{
+								"key": "client_id",
+								"value": "clientid456"
+							},
+							{
+								"key": "uuid",
+								"value": "af081b55-8658-4ef9-bcf4-ee631f5d206b"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"cardId\": \"3255613852316f2b4d4d796c344e38756339654972776f663745446e6d4c32486f455a4165374a476858343d\",\n  \"newPin\": \"q745963215y6d4r951753845f455a418789x\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/gcb/api/v1/cards/atmPin/reset",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"gcb",
+								"api",
+								"v1",
+								"cards",
+								"atmPin",
+								"reset"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 24 May 2024 01:59:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=45520236912c523f"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=76a38d1e98bb1ca6"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "115"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1716515997"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"0-2jmj7l5rSw0yVb/vlWAYkK/YBwk\""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": \"[ serverUnavailable ]\",\n    \"details\": \"string\",\n    \"location\": \"string\",\n    \"type\": \"error\",\n    \"moreInfo\": {}\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://32a736b0-ac4f-4a4e-b4ab-9657d2e06a89.mock.pstmn.io"
+		},
+		{
+			"key": "validClientIdAuthValue",
+			"value": "Basic Y2xpZW50aWQxMjM="
+		},
+		{
+			"key": "invalidClientIdAuthValue",
+			"value": "Basic 12345",
+			"type": "string"
+		},
+		{
+			"key": "validGrantType",
+			"value": "client_credentials",
+			"type": "string"
+		},
+		{
+			"key": "invalidGrantType",
+			"value": "cards",
+			"type": "string"
+		},
+		{
+			"key": "invalidAccessType",
+			"value": "application/jsonnn"
+		}
+	]
+}

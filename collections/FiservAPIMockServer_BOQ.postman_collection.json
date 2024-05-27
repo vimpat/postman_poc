@@ -1,0 +1,357 @@
+{
+	"info": {
+		"_postman_id": "036fccf0-7262-49a6-a1b7-eae6ee7fb38f",
+		"name": "FiservAPIMockServer_BOQ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13764479"
+	},
+	"item": [
+		{
+			"name": "GetCardsMessage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"DMC_HEADER\": {\n        \"H_messageName\": \"M.CMS.ARXDBFS.ATOM.I\",\n        \"H_messageVersion\": \"R00000\",\n        \"H_context\": \"00001VMAAPITEST\",\n        \"H_clientId\": \"\",\n        \"H_correlId\": \"\",\n        \"H_name\": \"\",\n        \"H_language\": \"EN\",\n        \"H_nextToken\": \"\"\n    },\n    \"messageInput\": {\n        \"4001\": \"0001000000020002940\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/GetCardsMessage",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"GetCardsMessage"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"DMC_HEADER\": {\n        \"H_messageName\": \"M.CMS.ARXDBFS.ATOM.I\",\n        \"H_messageVersion\": \"R00000\",\n        \"H_context\": \"00001VMAAPITEST\",\n        \"H_clientId\": \"\",\n        \"H_correlId\": \"\",\n        \"H_name\": \"\",\n        \"H_language\": \"EN\",\n        \"H_nextToken\": \"\"\n    },\n    \"messageInput\": {\n        \"4001\": \"0001000000020002940\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/GetCardsMessage",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"GetCardsMessage"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"DMC_HEADER\": {\n        \"H_messageName\": \"M.CMS.ARXDBFS.ATOM.O\",\n        \"H_messageVersion\": \"R00000\",\n        \"H_context\": \"00001VMAAPITEST\",\n        \"H_clientId\": \"\",\n        \"H_correlId\": \"\",\n        \"H_name\": \"\",\n        \"H_language\": \"EN\",\n        \"H_nextToken\": \"0000000000000000000000000000000000000000000000000000000000000000000000000000000020202020202020202020202020202020202020202020202020202020202020202020202020202020\",\n        \"H_prevToken\": \"0000000000000000000000000000000000000000000000000000000000000000000000000000000020202020202020202020202020202020202020202020202020202020202020202020202020202020\",\n        \"H_moreDataFlag\": \"\"\n    },\n    \"messageOutput\": {\n        \"5001\": \"100\",\n        \"5002\": \"0001000000020002940\",\n        \"5003\": \"VMA\",\n        \"5005\": \"\",\n        \"5006\": \"1\",\n        \"5007\": \"00/00/0000\",\n        \"5009\": \"\",\n        \"5010\": \"40.ANGLES\",\n        \"5011\": \"United states\",\n        \"5012\": \"\",\n        \"5013\": \"\",\n        \"5016\": \"\",\n        \"5018\": \"fdvmaaus@gmail.com\",\n        \"5019\": \"2345678\",\n        \"5020\": \"9000084255\",\n        \"5021\": \"9000084255\",\n        \"5037\": \"2\",\n        \"5038\": \"1\",\n        \"object1\": {\n            \"table1\": [\n                {\n                    \"5101\": \"100\",\n                    \"5102\": \"0001000010020002910\",\n                    \"5103\": \"1\",\n                    \"5116\": \" \",\n                    \"5117\": \" \",\n                    \"5118\": \"00/00/0000\",\n                    \"5119\": \"00/00/0000\",\n                    \"5120\": \"D\",\n                    \"5122\": \"$0.00\",\n                    \"5123\": \"$0.00\",\n                    \"5127\": \" \",\n                    \"5130\": \"0\",\n                    \"5131\": \"0\",\n                    \"5132\": \"0\"\n                }\n            ]\n        },\n        \"object2\": {\n            \"table2\": [\n                {\n                    \"5201\": \"100\",\n                    \"5202\": \"9846801010000001272\",\n                    \"5203\": \"1\",\n                    \"5204\": \"0001000010020002910\",\n                    \"5206\": \"000 123456\",\n                    \"5207\": \"1\",\n                    \"5208\": \" \",\n                    \"5209\": \"1\",\n                    \"5210\": \"0\",\n                    \"5211\": \"01/02/2020\",\n                    \"5212\": \"1\",\n                    \"5213\": \" \",\n                    \"5214\": \"00/00/0000\",\n                    \"5215\": \"Y\",\n                    \"5216\": \"0\",\n                    \"5217\": \"1\",\n                    \"5218\": \"31/01/2023\",\n                    \"5219\": \"00/00/0000\",\n                    \"5220\": \"3\",\n                    \"5221\": \"29/02/2020\",\n                    \"5222\": \"0\",\n                    \"5223\": \"00/00/0000\",\n                    \"5224\": \"Y\",\n                    \"5225\": \"181440\",\n                    \"5226\": \"FVA\",\n                    \"5250\": \"0\",\n                    \"5252\": \"0\",\n                    \"5253\": \" \"\n                },\n                {\n                    \"5201\": \"100\",\n                    \"5202\": \"9846801010000001280\",\n                    \"5203\": \"1\",\n                    \"5204\": \"0001000010020002910\",\n                    \"5206\": \"000     123456\",\n                    \"5207\": \"1\",\n                    \"5208\": \" \",\n                    \"5209\": \"0\",\n                    \"5210\": \"0\",\n                    \"5211\": \"01/02/2020\",\n                    \"5212\": \"1\",\n                    \"5213\": \" \",\n                    \"5214\": \"00/00/0000\",\n                    \"5215\": \"Y\",\n                    \"5216\": \"0\",\n                    \"5217\": \"1\",\n                    \"5218\": \"31/01/2023\",\n                    \"5219\": \"00/00/0000\",\n                    \"5220\": \"3\",\n                    \"5221\": \"29/02/2020\",\n                    \"5222\": \"0\",\n                    \"5223\": \"00/00/0000\",\n                    \"5224\": \"Y\",\n                    \"5225\": \"181440\",\n                    \"5226\": \"FVA\",\n                    \"5250\": \"0\",\n                    \"5252\": \"0\",\n                    \"5253\": \" \"\n                }\n            ]\n        },\n        \"Service_Return_Area\": {\n            \"status\": \"P\",\n            \"Error_List\": []\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "ResetPinMessageName",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"DMC_HEADER\": {\n        \"H_messageName\": \"M.CMS.ARXCPFS.ATOM.I\",\n        \"H_messageVersion\": \"R00000\",\n        \"H_context\": \"00001VMAAPITEST\",\n        \"H_correlId\": \"\",\n        \"H_clientId\": \"\",\n        \"H_name\": \"\",\n        \"H_language\": \"EN\",\n        \"H_nextToken\": \"\"\n    },\n    \"messageInput\": {\n        \"4001\": \"200\",\n        \"4002\": \"\",\n        \"4003\": \"0009543491303816348\",\n        \"4005\": \"FDBA16F6BDFFA168\",\n        \"4006\": \"\",\n        \"4007\": \"W\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/ResetPinMessageName",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"ResetPinMessageName"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"DMC_HEADER\": {\n        \"H_messageName\": \"M.CMS.ARXCPFS.ATOM.I\",\n        \"H_messageVersion\": \"R00000\",\n        \"H_context\": \"00001VMAAPITEST\",\n        \"H_correlId\": \"\",\n        \"H_clientId\": \"\",\n        \"H_name\": \"\",\n        \"H_language\": \"EN\",\n        \"H_nextToken\": \"\"\n    },\n    \"messageInput\": {\n        \"4001\": \"200\",\n        \"4002\": \"\",\n        \"4003\": \"0009543491303816348\",\n        \"4005\": \"FDBA16F6BDFFA168\",\n        \"4006\": \"\",\n        \"4007\": \"W\"\n    }\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/ResetPinMessageName",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ResetPinMessageName"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": " {\n     \"DMC_HEADER\": {\n         \"H_messageName\": \"M.CMS.ARXCPFS.ATOM.O\",\n         \"H_messageVersion\": \"R00000\",\n         \"H_context\": \"00001VMAAPITEST\",\n         \"H_clientId\": \"\",\n         \"H_correlId\": \"\",\n         \"H_name\": \"\",\n         \"H_language\": \"EN\",\n         \"H_fileSet\": \"\",\n         \"H_nextToken\": \"0000000000000000000000000000000000000000000000000000000000000000000000000000000020202020202020202020202020202020202020202020202020202020202020202020202020202020\",\n         \"H_prevToken\": \"0000000000000000000000000000000000000000000000000000000000000000000000000000000020202020202020202020202020202020202020202020202020202020202020202020202020202020\",\n         \"H_moreDataFlag\": \"\"\n     },\n     \"messageOutput\": {\n         \"5002\": \"\",\n         \"5003\": \"\",\n         \"5001\": \"0009543491303816348\",\n         \"5004\": \"A\",\n         \"H_token\": \"\",\n         \"Service_Return_Area\": {\n             \"status\": \"P\",\n             \"Error_List\": []\n         }\n     }\n }\n"
+				}
+			]
+		},
+		{
+			"name": "GetLimitsMessage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"DMC_HEADER\": {\n        \"H_messageName\": \"M.CMS.ARXDBFS.ATOM.I\",\n        \"H_messageVersion\": \"R00000\",\n        \"H_context\": \"00001VMAAPITEST\",\n        \"H_clientId\": \"\",\n        \"H_correlId\": \"\",\n        \"H_name\": \"\",\n        \"H_language\": \"EN\",\n        \"H_nextToken\": \"\"\n    },\n    \"messageInput\": {\n        \"4001\": \"0001000000020002940\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/GetLimitsMessage",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"GetLimitsMessage"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"DMC_HEADER\": {\n\t\t\"H_messageName\": \"M.CMS.AMEDAS.AS.QU.AMEDSPLQ\",\n\t\t\"H_messageVersion\": \"R00000\",\n\t\t\"H_context\": \"00001VMAAPITEST\",\n\t\t\"H_clientId\": \"\",\n\t\t\"H_correlId\": \"\",\n\t\t\"H_name\": \"\",\n\t\t\"H_language\": \"EN\"\n\t},\n\t\"messageInput\": {\n\t\t\"4001\": \"100\",\n\t\t\"4002\": \"0009846801010000743\",\n\t\t\"4003\": \"0001\"\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/GetLimitsMessage",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"GetLimitsMessage"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"DMC_HEADER\": {\n        \"H_messageName\": \"M.CMS.AMEDAS.AS.QU.AMEDSPLQ\",\n        \"H_messageVersion\": \"R00000\",\n        \"H_context\": \"00001VMAAPITEST\",\n        \"H_clientId\": \"\",\n        \"H_correlId\": \"\",\n        \"H_name\": \"\",\n        \"H_language\": \"EN\"\n    },\n    \"messageOutput\": {\n        \"4001\": \"100\",\n        \"4002\": \"0009846801010000743\",\n        \"4003\": \"1\",\n        \"9910\": \"0001000010000000743\",\n        \"0328\": \"1\",\n        \"0319\": \"$1,000.00\",\n        \"0320\": \"10\",\n        \"0321\": \"$2,000.00\",\n        \"0322\": \"$0.00\",\n        \"0323\": \"0\",\n        \"0324\": \"$0.00\",\n        \"0325\": \"$10,000.00\",\n        \"0326\": \"10\",\n        \"0327\": \"$5,000.00\",\n        \"Service_Return_Area\": {\n            \"status\": \"P\",\n            \"Error_List\": []\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "BlockUnblockMessage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"DMC_HEADER\": {\n        \"H_messageName\": \"M.CMS.AMEDAS.AS.UP.AMEDBLKJ\",\n        \"H_messageVersion\": \"R00000\",\n        \"H_context\": \"00001VMAAPITEST\",\n        \"H_correlId\": \"\",\n        \"H_clientId\": \"\",\n        \"H_name\": \"\",\n        \"H_language\": \"EN\",\n        \"H_nextToken\": \"\"\n    },\n    \"messageInput\": {\n        \"4001\": \"100\",\n        \"4002\": \"0009846801020169793\",\n        \"4003\": \"0001\",\n        \"OF5\": {\n            \"0301\": \" \"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/BlockUnblockMessage",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"BlockUnblockMessage"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"DMC_HEADER\": {\n        \"H_messageName\": \"M.CMS.AMEDAS.AS.UP.AMEDBLKJ\",\n        \"H_messageVersion\": \"R00000\",\n        \"H_context\": \"00001VMAAPITEST\",\n        \"H_correlId\": \"\",\n        \"H_clientId\": \"\",\n        \"H_name\": \"\",\n        \"H_language\": \"EN\",\n        \"H_nextToken\": \"\"\n    },\n    \"messageInput\": {\n        \"4001\": \"100\",\n        \"4002\": \"0009846801020169793\",\n        \"4003\": \"0001\",\n        \"OF5\": {\n            \"0301\": \" \"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/BlockUnblockMessage",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"BlockUnblockMessage"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "{\n     \"DMC_HEADER\": {\n         \"H_messageName\": \"M.CMS.AMEDAS.AS.UP.AMEDBLKJ\",\n         \"H_messageVersion\": \"R00000\",\n         \"H_context\": \"00001VMAAPITEST\",\n         \"H_clientId\": \"\",\n         \"H_correlId\": \"\",\n         \"H_name\": \"\",\n         \"H_language\": \"EN\",\n         \"H_fileSet\": \"\"\n     },\n     \"messageOutput\": {\n         \"4001\": \"100\",\n         \"4002\": \"0009846801020169793\",\n         \"4003\": \"1\",\n         \"9910\": \"0001000011017493805\",\n         \"OF5\": {\n             \"0301\": \" \",\n             \"4007\": \"0\",\n             \"4012\": \"15/05/2024\",\n             \"0237\": \"1\"\n         },\n         \"H_token\": \"\",\n         \"Service_Return_Area\": {\n             \"status\": \"P\",\n             \"Error_List\": []\n         }\n     }\n }"
+				}
+			]
+		},
+		{
+			"name": "BlockUnblockAccountMessage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"DMC_HEADER\" : {\n\t\t\"H_messageName\" : \"M.CMS.AMBSAS.AS.UP.AMBSBLKJ\",\n\t\t\"H_messageVersion\" : \"R00000\",\n\t\t\"H_context\" : \"00001VMAAPITEST\",\n\t\t\"H_clientId\" :\"\",\n\t\t\"H_correlId\" : \"\",\n\t\t\"H_name\" : \"\",\n\t\t\"H_language\" : \"EN\"\n\t},\n\t\"messageInput\" : {\n\t\t\"4001\" :\"100\",\n\t\t\"4002\" :\"0001000010020002910\",\n\t\t\"4003\" :\"001\",\n\t\t\"9904\" :\"0\",\n\t\t\"OF1\" : {\n\t\t\t\"0125\" :\"X\"\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/BlockUnblockAccountMessage",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"BlockUnblockAccountMessage"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"DMC_HEADER\" : {\n\t\t\"H_messageName\" : \"M.CMS.AMBSAS.AS.UP.AMBSBLKJ\",\n\t\t\"H_messageVersion\" : \"R00000\",\n\t\t\"H_context\" : \"00001VMAAPITEST\",\n\t\t\"H_clientId\" :\"\",\n\t\t\"H_correlId\" : \"\",\n\t\t\"H_name\" : \"\",\n\t\t\"H_language\" : \"EN\"\n\t},\n\t\"messageInput\" : {\n\t\t\"4001\" :\"100\",\n\t\t\"4002\" :\"0001000010020002910\",\n\t\t\"4003\" :\"001\",\n\t\t\"9904\" :\"0\",\n\t\t\"OF1\" : {\n\t\t\t\"0125\" :\"X\"\n\t\t}\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/BlockUnblockAccountMessage",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"BlockUnblockAccountMessage"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "{\n\t\"DMC_HEADER\" : {\n\t\t\"H_messageName\" : \"M.CMS.AMBSAS.AS.UP.AMBSBLKJ\",\n\t\t\"H_messageVersion\" : \"R00000\",\n\t\t\"H_context\" : \"00001VMAAPITEST\",\n\t\t\"H_clientId\" : \"\",\n\t\t\"H_correlId\" : \"\",\n\t\t\"H_name\" : \"\",\n\t\t\"H_language\" : \"EN\"\n\t},\n\t\"messageOutput\" : {\n\t\t\"4001\" : \"100\",\n\t\t\"4002\" : \"0001000010020002910\",\n\t\t\"4003\" : \"1\",\n\t\t\"9904\" : \"0\",\n\t\t\"OF1\" : {\n\t\t\t\"0125\" : \"X\",\n\t\t\t\"0127\" : \" \",\n\t\t\t\"0173\" : \"01/03/2020\",\n\t\t\t\"0174\" : \"00/00/0000\"\n\t\t},\n\t\t\"Service_Return_Area\" : {\n\t\t\t\"status\" : \"P\",\n\t\t\t\"Error_List\" : []\n\t\t}\n\t}\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://9e852582-0002-480f-9a77-e96d6cb63c89.mock.pstmn.io"
+		}
+	]
+}
