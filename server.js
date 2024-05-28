@@ -2,7 +2,7 @@ const PostmanLocalMockServer = require('@jordanwalsh23/postman-local-mock-server
 const fs = require('node:fs');
 
 let options = {
-  port : 3555
+  port : process.env.PORT||3000
 }
 
 //Create the collection object.

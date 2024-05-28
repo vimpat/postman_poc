@@ -1,0 +1,5 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/9eb95202-88ea-45af-98c2-3a51bcb4cfe9/resourceGroups/rgPostmanPoc/providers/Microsoft.Web/sites/boqlocalpostmanmockserver",
+    "appService.deploySubpath": ".",
+    "appService.showBuildDuringDeployPrompt": false
+}
