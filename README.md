@@ -29,13 +29,18 @@ This will create a package.json file with default values.
 
 ### 3. Install Dependencies
 
+```bash
 npm install express
 npm install -g @jordanwalsh23/postman-local-mock-server
 postman-local -c PATH_TO_COLLECTION_JSON.json -p 8080
+```
 
 
 ### 4. Create Your Node.js Application
 create or use Server.js file from this solution and 
-run command => node server.js
+
+```bash
+node server.js
+```
 
 Once local host is up and running, append request path after local host url.
