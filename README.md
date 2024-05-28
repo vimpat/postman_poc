@@ -45,10 +45,10 @@ node server.js
 
 Once local host is up and running, append request path after local host url.
 
-Moving on to Azure World.
+## Moving on to Azure World.
 
-Step 1 :- Build and Deploy to Azure using VS code and Github repo. (step by step instruction)
+### Step 1 :- Build and Deploy to Azure using VS code and Github repo. (step by step instruction)
 https://learn.microsoft.com/en-us/azure/app-service/quickstart-nodejs?tabs=windows&pivots=development-environment-vscode
 
-Step 2:- Configure web app to include web.config file and AZ cloudshell command to specify start up file.
+### Step 2:- Configure web app to include web.config file and AZ cloudshell command to specify start up file.
 https://learn.microsoft.com/en-us/azure/app-service/configure-language-nodejs?pivots=platform-linux
