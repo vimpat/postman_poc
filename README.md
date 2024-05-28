@@ -1,6 +1,6 @@
-Trying to setup postman local mock server.
 
-# Node.js Application Setup in Visual Studio Code
+
+# Set up for Node.js application running local mock server Setup in Visual Studio Code.
 
 This guide will walk you through setting up a Node.js application in Visual Studio Code (VS Code).
 
