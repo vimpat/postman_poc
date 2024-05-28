@@ -14,6 +14,10 @@ let server = new PostmanLocalMockServer(options);
 //Start the server
 server.start();
 
+// to set up app insights
+// const appInsights = require('applicationinsights');
+// appInsights.setup('YOUR_INSTRUMENTATION_KEY').start();
+
 //Run some requests against your server
 // axios.get(`http://localhost:3555`).then(res => {
 //   //do something with the mocked response.
