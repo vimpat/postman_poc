@@ -36,7 +36,7 @@ postman-local -c PATH_TO_COLLECTION_JSON.json -p 8080
 
 
 ### 4. Create Your Node.js Application
-create or use Server.js file from this solution and 
+create or use Server.js file from this solution and run following command to get localhost running.
 
 ```bash
 node server.js
