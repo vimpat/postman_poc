@@ -44,8 +44,10 @@ node server.js
 
 Once local host is up and running, append request path after local host url.
 
-
-
+E.g.
+Localhost url with baseUri : http://localhost:3555
+Get cards endpoint : baseUri + "/gcb/api/v1/cards?cardFunction=Debit"
+http://localhost:3555/gcb/api/v1/cards?cardFunction=Debit
 
 
 
