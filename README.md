@@ -57,5 +57,9 @@ Once local host is up and running, append request path after local host url.
 ### Step 1 :- Build and Deploy to Azure using VS code and Github repo. (step by step instruction)
 https://learn.microsoft.com/en-us/azure/app-service/quickstart-nodejs?tabs=windows&pivots=development-environment-vscode
 
+
+![image](https://github.com/vimpat/postman_poc/assets/164297543/2539bada-0eac-4707-918f-cbc91c3d8f83)
+
+
 ### Step 2:- Configure web app to include web.config file and AZ cloudshell command to specify start up file.
 https://learn.microsoft.com/en-us/azure/app-service/configure-language-nodejs?pivots=platform-linux
